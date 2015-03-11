@@ -171,12 +171,6 @@ setup_platform()
 	echo ${PRODUCT_VERSION}-${ARCH} > ${1}${MARKER}
 
 	echo cdrom > ${1}/usr/local/etc/platform
-
-	# Set sane defaults via rc.conf(5)
-	cat > ${1}/etc/rc.conf <<EOF
-tmpmfs="YES"
-tmpsize="128m"
-EOF
 }
 
 setup_mtree()
